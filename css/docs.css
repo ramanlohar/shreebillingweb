@@ -1,0 +1,152 @@
+/* Documentation Specific Styles */
+.docs-header {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, var(--bg-color) 100%);
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+  }
+  
+  .docs-sidebar {
+    position: sticky;
+    top: 20px;
+    background-color: var(--card-bg);
+  }
+  
+  .docs-sidebar .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .docs-sidebar .nav-link {
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    border-radius: 5px;
+    margin-bottom: 0.25rem;
+  }
+  
+  .docs-sidebar .nav-link:hover,
+  .docs-sidebar .nav-link.active {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .docs-sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+  }
+  
+  .docs-main {
+    background-color: var(--bg-color);
+  }
+  
+  .docs-section {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  [data-bs-theme="dark"] .docs-section {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .docs-section:last-child {
+    border-bottom: none;
+  }
+  
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .docs-step {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+  }
+  
+  .step-content {
+    flex: 1;
+  }
+  
+  .docs-code-block {
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+  }
+  
+  .docs-code-block .nav-tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-bs-theme="dark"] .docs-code-block .nav-tabs {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .docs-code-block .nav-link {
+    border: none;
+    color: var(--light-text);
+    font-weight: 500;
+  }
+  
+  .docs-code-block .nav-link.active {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-bottom: 2px solid var(--primary-color);
+  }
+  
+  pre {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+  
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  pre:hover .copy-btn {
+    opacity: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    .docs-sidebar {
+      position: static;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .docs-header {
+      padding: 3rem 0;
+    }
+    
+    .docs-step {
+      flex-direction: column;
+    }
+    
+    .step-number {
+      margin-bottom: 0.5rem;
+    }
+  }
